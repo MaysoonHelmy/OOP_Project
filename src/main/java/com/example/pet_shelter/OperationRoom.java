@@ -1,9 +1,8 @@
 package com.example.pet_shelter;
-import java.time.LocalDateTime;
-import java.util.*;
 
+import java.util.ArrayList;
 
-public class OperationRoom extends Display {
+public class OperationRoom {
     private int roomNumber;
     private ArrayList<String> slots;
 
@@ -23,9 +22,8 @@ public class OperationRoom extends Display {
     public void addSlot(String slot) {
         slots.add(slot);
     }
-    @Override
-    public void displayInfo() {
 
+    public void removeSlot(String slot) {
+        slots.remove(slot);
     }
 }
-
