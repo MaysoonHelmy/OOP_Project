@@ -3,16 +3,22 @@ package com.example.pet_shelter;
 import com.example.pet_shelter.Display_pets;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.layout.ColumnConstraints;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -29,6 +35,13 @@ public class PetsController implements Initializable {
 
     @FXML
     private Text pets;
+
+    @FXML
+    private Button Add;
+
+    @FXML
+    private Button Back;
+
 
     private ArrayList<Display_pets> petsList;
 
@@ -241,4 +254,39 @@ public class PetsController implements Initializable {
 
         buildPetGrid();
     }
+
+    @FXML
+    void Add_Pets(MouseEvent event) {
+        try {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("Add-pet.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception ex) {
+            System.out.println("y" + ex.getMessage());
+
+        }
+    }
+    @FXML
+    void Back(MouseEvent event) {
+        try {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("Start_Page.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception ex) {
+            System.out.println("y" + ex.getMessage());
+
+        }
+    }
 }
+
+
+
+

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,14 +22,14 @@
             <Rectangle2D minX="1550.0" minY="800.0" />
          </viewport>
       </ImageView>
-      <Text fx:id="Title" layoutX="652.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operation Rooms">
+      <Text fx:id="Title" layoutX="654.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operation Rooms">
          <font>
             <Font name="Times New Roman Bold" size="48.0" />
          </font>
       </Text>
-      <ScrollPane fx:id="Scroll" layoutX="141.0" layoutY="130.0" prefHeight="563.0" prefWidth="1296.0">
+      <ScrollPane fx:id="Scroll" layoutX="211.0" layoutY="99.0" prefHeight="563.0" prefWidth="1200.0">
          <content>
-            <GridPane fx:id="Grid" prefHeight="549.0" prefWidth="1288.0">
+            <GridPane fx:id="Grid" prefHeight="549.0" prefWidth="1200.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -40,5 +41,15 @@
             </GridPane>
          </content>
       </ScrollPane>
+      <Button fx:id="Back" layoutX="221.0" layoutY="684.0" mnemonicParsing="false" onMouseClicked="#Back" prefHeight="77.0" prefWidth="189.0" text="Back">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Save" layoutX="1222.0" layoutY="684.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="189.0" text="Save">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

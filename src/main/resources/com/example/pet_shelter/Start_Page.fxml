@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pet_shelter.HelloPage">
+   <children>
+      <ImageView fx:id="myBackground" fitHeight="800.0" fitWidth="1550.0" pickOnBounds="true">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+         <viewport>
+            <Rectangle2D minX="1550.0" minY="700.0" />
+         </viewport>
+      </ImageView>
+      <Text layoutX="593.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER" wrappingWidth="364.3830966949463">
+         <font>
+            <Font name="Times New Roman Bold" size="72.0" />
+         </font>
+      </Text>
+      <Text layoutX="268.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" What data do you need to Display" textAlignment="CENTER" wrappingWidth="965.9831638336182">
+         <font>
+            <Font name="Times New Roman" size="64.0" />
+         </font>
+      </Text>
+      <Button fx:id="Operations" layoutX="215.0" layoutY="330.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#onHelloButtonClick" prefHeight="71.0" prefWidth="260.0" text="Operations">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Donors" layoutX="707.0" layoutY="330.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#onHelloButtonClick" prefHeight="71.0" prefWidth="187.0" text="Donors">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Vets" layoutX="1190.0" layoutY="330.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#Vets" prefHeight="71.0" prefWidth="187.0" text="Vets">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Pets" layoutX="483.0" layoutY="450.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#Pets" prefHeight="64.0" prefWidth="187.0" text="Pets">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="PetsForAdoption" layoutX="878.0" layoutY="450.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#AdoptionPets" prefHeight="64.0" prefWidth="347.0" text="Pets For Adoption">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="Donated_Money" layoutX="648.0" layoutY="583.0" minHeight="0.0" mnemonicParsing="false" onMouseClicked="#DonateMoney" prefHeight="64.0" prefWidth="320.0" text="Donated Money">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

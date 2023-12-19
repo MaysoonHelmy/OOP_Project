@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="87.0" prefWidth="171.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pet_shelter.VetController">
+   <children>
+      <HBox layoutX="-1.0" onMouseClicked="#click" prefHeight="87.0" prefWidth="753.0" style="-fx-background-color: #99A1A6;">
+         <children>
+            <Label fx:id="vetname" alignment="CENTER" prefHeight="86.0" prefWidth="167.0" text="Ahmed">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="vetid" alignment="CENTER" prefHeight="86.0" prefWidth="164.0" text="123456">
+               <font>
+                  <Font name="Cambria Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="vetpassword" alignment="CENTER" prefHeight="87.0" prefWidth="186.0" text="123456789">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearsOfExperience" alignment="CENTER" prefHeight="87.0" prefWidth="179.0" text="5 Years">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

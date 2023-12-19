@@ -2,16 +2,25 @@ package com.example.pet_shelter;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,6 +37,9 @@ public class AdoptedController {
     private Text petsText;
 
     @FXML
+    private Button Back;
+
+    @FXML
     private void initialize() {
         // Assign the petsList from Display_pets class
         List<Display_pets> petsList = Display_pets.getPetsList();
@@ -42,56 +54,84 @@ public class AdoptedController {
     }
 
     private void createGridPane() {
-        // Customize grid pane properties if needed
         gridpane.setAlignment(Pos.CENTER);
         gridpane.setHgap(10);
-        gridpane.setVgap(20);
-
+        gridpane.setVgap(30);
         gridpane.getColumnConstraints().clear();
 
+        for (int i = 0; i < 7; i++) {
+            ColumnConstraints columnConstraints = new ColumnConstraints();
+            columnConstraints.setHalignment(HPos.CENTER);
+
+            // Adjust the constraints for the name column (column index 0)
+            if (i == 0) {
+                columnConstraints.setHgrow(Priority.NEVER);  // Allow the column to shrink
+            } else {
+                columnConstraints.setHgrow(Priority.ALWAYS);  // Let other columns grow
+            }
+
+            gridpane.getColumnConstraints().add(columnConstraints);
+        }
     }
 
     private void displayAvailablePets(List<Display_pets> availablePets) {
-        // Customize grid pane properties if needed
-        ColumnConstraints columnConstraints = new ColumnConstraints();
-        columnConstraints.setHalignment(HPos.CENTER);
-        gridpane.getColumnConstraints().add(columnConstraints);
-
-        // Add header for pets
-        int headerRow = 0;
-
-        Font headerFont = Font.font("Times New Roman", FontWeight.BOLD, 18);
-
-        String[] headerTexts = {"Name", "Pet ID", "Pet Type", "Adoption Status", "Adoption", "Treatment Status", "Adopt"};
-
+        // Add labels for each column
+        String[] headerTexts = {"Name", "Pet ID", "Pet Type", "Age", "Adoption Status", "Adoption", "Treatment Status"};
         for (int i = 0; i < headerTexts.length; i++) {
             Label label = new Label(headerTexts[i]);
-            label.setFont(headerFont);
-            gridpane.add(label, i, headerRow);
+            label.setFont(Font.font("Times New Roman", FontWeight.BOLD, 18));
+            gridpane.add(label, i, 0);
             GridPane.setHalignment(label, HPos.CENTER);
         }
 
-        // Add available pets and Adopt buttons to the grid pane
-        for (int row = 0; row < availablePets.size(); row++) {
-            Display_pets pet = availablePets.get(row);
+        // Populate data in the corresponding columns
+        for (int i = 0; i < availablePets.size(); i++) {
+            Display_pets pet = availablePets.get(i);
 
-            gridpane.add(new Text(pet.getName()), 0, row + 1);
-            gridpane.add(new Text(pet.getPetType()), 1, row + 1);
-            gridpane.add(new Text(pet.getPetId()), 2, row + 1);
-            gridpane.add(new Text(pet.getReadyForAdoptionStatus()), 3, row + 1);
-            gridpane.add(new Text(pet.getTreatmentStatus()), 4, row + 1);
-            gridpane.add(new Text(pet.getAdoptionStatus()), 5, row + 1);
+            Label nameLabel = new Label(pet.getName());
+            nameLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(nameLabel, 0, i + 1);
 
-            // Add Adopt button
-            Button adoptButton = new Button("Adopt");
-            adoptButton.setOnAction((ActionEvent event) -> handleAdoptButton(pet));
-            gridpane.add(adoptButton, 6, row + 1);
+            Label idLabel = new Label(pet.getPetId());
+            idLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(idLabel, 1, i + 1);
 
+            Label typeLabel = new Label(pet.getPetType());
+            typeLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(typeLabel, 2, i + 1);
+
+            Label ageLabel = new Label(String.valueOf(pet.getAge()));
+            ageLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(ageLabel, 3, i + 1);
+
+            Label adoptionStatusLabel = new Label(pet.getAdoptionStatus());
+            adoptionStatusLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(adoptionStatusLabel, 4, i + 1);
+
+            Label readyForAdoptionLabel = new Label(pet.getReadyForAdoptionStatus());
+            readyForAdoptionLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(readyForAdoptionLabel, 5, i + 1);
+
+            Label treatmentStatusLabel = new Label(pet.getTreatmentStatus());
+            treatmentStatusLabel.setFont(Font.font("Times New Roman", 14));
+            gridpane.add(treatmentStatusLabel, 6, i + 1);
         }
     }
 
-    private void handleAdoptButton(Display_pets pet) {
-        System.out.println("Adopting " + pet.getName());
 
+    @FXML
+    void Back(MouseEvent event) {
+        try {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("Start_Page.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception ex) {
+            System.out.println("y" + ex.getMessage());
+
+        }
     }
 }

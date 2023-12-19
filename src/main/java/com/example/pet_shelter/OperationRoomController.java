@@ -1,19 +1,25 @@
 package com.example.pet_shelter;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +40,12 @@ public class OperationRoomController {
 
     @FXML
     private VBox Vbox;
+
+    @FXML
+    private Button Back;
+
+    @FXML
+    private Button Save;
 
 
     @FXML
@@ -129,5 +141,21 @@ public class OperationRoomController {
         String selectedSlot = slotButton.getText();
         room.removeSlot(selectedSlot);
         slotButton.setDisable(true);
+    }
+
+    @FXML
+    void Back(MouseEvent event) {
+        try {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("Start_Page.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception ex) {
+            System.out.println("y" + ex.getMessage());
+
+        }
     }
 }
