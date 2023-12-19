@@ -58,16 +58,29 @@ public class AdoptedController {
         gridpane.setHgap(10);
         gridpane.setVgap(30);
         gridpane.getColumnConstraints().clear();
+        gridpane.getRowConstraints().clear();
+
+
+        RowConstraints headerRowConstraints = new RowConstraints();
+        headerRowConstraints.setValignment(VPos.CENTER);
+        headerRowConstraints.setMinHeight(30);
+        gridpane.getRowConstraints().add(headerRowConstraints);
+
+        RowConstraints dataRowConstraints = new RowConstraints();
+        dataRowConstraints.setValignment(VPos.CENTER);
+        dataRowConstraints.setMinHeight(25);
+        gridpane.getRowConstraints().add(dataRowConstraints);
 
         for (int i = 0; i < 7; i++) {
             ColumnConstraints columnConstraints = new ColumnConstraints();
             columnConstraints.setHalignment(HPos.CENTER);
 
-            // Adjust the constraints for the name column (column index 0)
+
             if (i == 0) {
-                columnConstraints.setHgrow(Priority.NEVER);  // Allow the column to shrink
+                columnConstraints.setHgrow(Priority.NEVER);
+                columnConstraints.setMinWidth(100);
             } else {
-                columnConstraints.setHgrow(Priority.ALWAYS);  // Let other columns grow
+                columnConstraints.setHgrow(Priority.ALWAYS);
             }
 
             gridpane.getColumnConstraints().add(columnConstraints);

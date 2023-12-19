@@ -44,9 +44,6 @@ public class OperationRoomController {
     @FXML
     private Button Back;
 
-    @FXML
-    private Button Save;
-
 
     @FXML
     private void initialize() {
