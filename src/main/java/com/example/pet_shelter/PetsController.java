@@ -115,6 +115,9 @@ public class PetsController implements Initializable {
         buildPetGrid();
     }
 
+
+
+
     private void buildPetGrid() {
         Font.font("Times new Roman", 5);
         gridpane.setAlignment(Pos.CENTER);
@@ -192,18 +195,23 @@ public class PetsController implements Initializable {
             editButton.setPrefWidth(100);
             GridPane.setHgrow(editButton, javafx.scene.layout.Priority.ALWAYS);
             GridPane.setHalignment(editButton, javafx.geometry.HPos.CENTER);
-            int currentRow = i + 2;
-            editButton.setOnAction(event -> handleEditButtonClick(petsList.get(currentRow - 1))); // Subtract 1 to get the correct pet
+            int currentRow = i + 1;
+            editButton.setOnAction(event -> handleEditButtonClick(petsList.get(currentRow - 1)));
             gridpane.add(editButton, 7, i + 2);
 
             // Create a "Delete" button for each row
             Button deleteButton = new Button("Delete");
             deleteButton.setStyle("-fx-font-size: 15");
             deleteButton.setPrefWidth(100);
-            GridPane.setHgrow(deleteButton, javafx.scene.layout.Priority.ALWAYS);
-            GridPane.setHalignment(deleteButton, javafx.geometry.HPos.CENTER);
-            deleteButton.setOnAction(event -> deletePet(petsList.get(currentRow - 1))); // Subtract 1 to get the correct pet
+            GridPane.setHalignment(deleteButton, HPos.CENTER);
+            deleteButton.setUserData(pet);
+            deleteButton.setOnAction(event -> {
+                Display_pets petToDelete = (Display_pets) deleteButton.getUserData();
+                deletePet(petToDelete);
+            });
+
             gridpane.add(deleteButton, 8, i + 2);
+
         }
     }
 
