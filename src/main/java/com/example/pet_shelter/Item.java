@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import model.Pet;
+
 
 import java.util.Objects;
 
@@ -22,9 +22,9 @@ public class Item {
         myListener.onClickListener(cats);
     }
     private Pet cats;
-    private MyListener myListener;
+    private MyListener1 myListener;
 
-    public void setData (Pet cats, MyListener myListener)
+    public void setData (Pet cats, MyListener1 myListener)
     {
         this.cats = cats;
         this.myListener = myListener;

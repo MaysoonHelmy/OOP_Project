@@ -23,9 +23,9 @@ public class VetController {
         myListener.onClickListener(vet2);
     }
     private vet vet2;
-    private MyListener myListener;
+    private MyListener1 myListener;
 
-    public void setData(vet vet2, MyListener myListener) {
+    public void setData(vet vet2, MyListener1 myListener) {
         this.vet2 = vet2;
         this.myListener = myListener;
         vetname.setText(vet2.getName());

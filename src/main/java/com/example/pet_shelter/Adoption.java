@@ -3,7 +3,7 @@ package com.example.pet_shelter;
 public class Adoption {
     private String Appointment;
 
-    public Display_pets adoptedPet=new Display_pets();
+    public Pet adoptedPet=new Pet();
 
     public String getAppointment() {
         return Appointment;

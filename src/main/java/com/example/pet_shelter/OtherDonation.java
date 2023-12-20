@@ -1,6 +1,6 @@
 package com.example.pet_shelter;
 
-public class OtherDonation extends Donation {
+public class OtherDonation extends Donation{
    private String Appointment;
    private String Type;
 

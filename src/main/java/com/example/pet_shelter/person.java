@@ -1,7 +1,6 @@
 package com.example.pet_shelter;
 
-
-public abstract class Person {
+public class person {
     private String Name;
     private String Id;
     private String Password;

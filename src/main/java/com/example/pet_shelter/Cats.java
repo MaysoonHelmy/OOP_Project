@@ -18,7 +18,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import model.Pet;
 
 import java.io.IOException;
 import java.net.URL;
@@ -56,7 +55,7 @@ public class Cats implements Initializable {
     private Label id;
      private List<Pet> cats = new ArrayList<>();
      private Image image;
-     private MyListener myListener;
+     private MyListener1 myListener;
 
      public void setInfo(Client client,Pet pet)
      {
@@ -248,7 +247,7 @@ public class Cats implements Initializable {
         cats.addAll(getData());
         if (cats.size()>0){
             setChosenCatCard(cats.get(0));
-            myListener= new MyListener() {
+            myListener = new MyListener1() {
                 @Override
                 public void onClickListener(Pet cat) {
                     setChosenCatCard(cat);

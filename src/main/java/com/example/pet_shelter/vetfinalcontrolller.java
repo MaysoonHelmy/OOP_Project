@@ -50,9 +50,9 @@ public class vetfinalcontrolller implements Initializable {
     @FXML
     private TextField vetpassword;
 
-    private List<vet> vets = new ArrayList<>();
+    private List<vet> vets = new ArrayList<vet>();
     private Image image;
-    private MyListener myListener;
+    private MyListener1 myListener;
     private List<vet> getData() {
         List<vet> vets = new ArrayList<>();
         vet vet1;
@@ -194,7 +194,7 @@ public class vetfinalcontrolller implements Initializable {
 
         for (int i = 0; i < vets.size(); i++) {
             vet vet10=new vet();
-            vet10=vets.get(i);
+            vet10=vet.get(i);
             System.out.println(vet10.getName());
             System.out.println(vets.indexOf(vet10));
         }
@@ -266,7 +266,12 @@ public class vetfinalcontrolller implements Initializable {
         vets.addAll(getData());
         if (vets.size() > 0) {
 //            setChosenVet(vets.get(0));
-            myListener = new MyListener() {
+            myListener = new MyListener1() {
+                @Override
+                public void onClickListener(Pet cats) {
+                    
+                }
+
                 @Override
                 public void onClickListener(vet vet0) {
                     setChosenVet(vet0);

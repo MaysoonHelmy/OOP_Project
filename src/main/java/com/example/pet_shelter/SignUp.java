@@ -22,9 +22,9 @@ import java.util.ResourceBundle;
 
 public class SignUp implements Initializable {
     private static person person1=new Client();
-    private static person person2=new Vet();
+    private static person person2=new vet();
     private static Client client1=new Client();
-    private static Vet vet1=new Vet();
+    private static vet vet1=new vet();
     private static Admin admin1=new Admin();
     DonoView donoView=new DonoView();
 
@@ -117,7 +117,7 @@ public class SignUp implements Initializable {
         }
 
         else{
-            vet1=(Vet) person2;
+            vet1=(vet) person2;
         }
 
     }
