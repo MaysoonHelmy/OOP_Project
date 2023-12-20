@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.DonateView">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1550.0" onMouseClicked="#domoney" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_1" layoutX="656.0" layoutY="31.0" prefHeight="110.0" prefWidth="244.0" text="Donate">
+         <font>
+            <Font name="System Bold" size="70.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_2" layoutX="377.0" layoutY="192.0" prefHeight="94.0" prefWidth="874.0" text="What do you want to donate?">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="Button_3" cancelButton="true" layoutX="1029.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#domoney" prefHeight="86.0" prefWidth="357.0" text="Donated Money" textAlignment="JUSTIFY" textFill="#0d0000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.78" specularConstant="0.1" specularExponent="32.48" surfaceScale="1.04">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="134.17" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="Button_2" cancelButton="true" layoutX="563.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#tafwoera" prefHeight="86.0" prefWidth="358.0" text="Donated Food" textAlignment="JUSTIFY" textFill="#0d0000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.78" specularConstant="0.1" specularExponent="32.48" surfaceScale="1.04">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="134.17" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="Button_1" cancelButton="true" layoutX="101.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#domedicin" prefHeight="86.0" prefWidth="370.0" text="Donated Medicine" textAlignment="JUSTIFY" textFill="#0d0000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.78" specularConstant="0.1" specularExponent="32.48" surfaceScale="1.04">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="134.17" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="Button_4" layoutX="669.0" layoutY="638.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="48.0" prefWidth="145.0" text="Back">
+         <effect>
+            <Lighting diffuseConstant="0.89" specularExponent="34.31" surfaceScale="2.97">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

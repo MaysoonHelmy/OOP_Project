@@ -1,164 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pet_shelter.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.HelloController">
    <children>
-      <ImageView fitHeight="785.0" fitWidth="1539.0" layoutX="5.0" layoutY="-2.0" pickOnBounds="true" smooth="false">
-         <viewport>
-            <Rectangle2D />
-         </viewport>
+      <ImageView fitHeight="800.0" fitWidth="1550.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@Background.png" />
+            <Image url="@money.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="14.0" prefHeight="73.0" prefWidth="435.0" text="WELCOME!">
-         <font>
-            <Font name="Arial Black" size="60.0" />
-         </font>
-         <padding>
-            <Insets left="20.0" top="15.0" />
-         </padding>
-      </Label>
-      <Label layoutX="494.0" layoutY="118.0" prefHeight="104.0" prefWidth="543.0" text="What do you need to display" textAlignment="CENTER">
-         <font>
-            <Font name="Arial Narrow Bold" size="48.0" />
-         </font>
-      </Label>
-      <HBox alignment="CENTER" layoutX="588.0" layoutY="222.0" prefHeight="546.0" prefWidth="816.0" style="-fx-background-color: #FFFFFF;">
-         <children>
-            <ScrollPane fx:id="scroll" prefHeight="399.0" prefWidth="815.0" style="-fx-background-color: #FFFFFF;" HBox.hgrow="ALWAYS">
-               <content>
-                  <GridPane fx:id="grid" prefHeight="27.0" prefWidth="110.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                  </GridPane>
-               </content>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </ScrollPane>
-         </children>
-      </HBox>
-      <AnchorPane layoutX="22.0" layoutY="222.0" prefHeight="387.0" prefWidth="558.0">
-         <children>
-            <Pane layoutX="-7.0" layoutY="76.0" prefHeight="419.0" prefWidth="536.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label fx:id="status" layoutX="279.0" layoutY="280.0" prefHeight="36.0" prefWidth="211.0" textFill="#1bcf1d">
-                     <font>
-                        <Font name="Book Antiqua Italic" size="28.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="updatebtn" layoutX="279.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#update" prefHeight="50.0" prefWidth="114.0" text="Update">
-                     <font>
-                        <Font name="Arial Black" size="21.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="deletebtn" layoutX="421.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="50.0" prefWidth="123.0" text="Delete">
-                     <font>
-                        <Font name="Arial Black" size="23.0" />
-                     </font>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets left="300.0" top="200.0" />
-               </padding>
-            </Pane>
-            <VBox layoutX="282.4" layoutY="6.0" prefHeight="285.0" prefWidth="252.0" AnchorPane.leftAnchor="282.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <TextField fx:id="vetname" prefHeight="62.0" prefWidth="522.0">
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="vetpassword" prefHeight="62.0" prefWidth="522.0">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="vetid" prefHeight="62.0" prefWidth="522.0">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="vetexp" prefHeight="62.0" prefWidth="263.0">
-                     <font>
-                        <Font name="Arial Black" size="20.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-            <VBox layoutX="-7.0" prefHeight="286.0" prefWidth="272.0">
-               <children>
-                  <Label prefHeight="62.0" prefWidth="181.0" text="Name :">
-                     <font>
-                        <Font name="Cambria" size="31.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </Label>
-                  <Label prefHeight="62.0" prefWidth="195.0" text="password :">
-                     <font>
-                        <Font name="Cambria" size="31.0" />
-                     </font>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label prefHeight="62.0" prefWidth="198.0" text="vet-ID :">
-                     <font>
-                        <Font name="Cambria" size="31.0" />
-                     </font>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label prefHeight="62.0" prefWidth="195.0" text="years of exp :">
-                     <font>
-                        <Font name="Cambria" size="31.0" />
-                     </font>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Label>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
-      <Button fx:id="Back" layoutX="389.0" layoutY="650.0" mnemonicParsing="false" onMouseClicked="#Back" prefHeight="43.0" prefWidth="105.0" text="Back">
-         <font>
-            <Font name="Arial Bold" size="23.0" />
-         </font>
+      <Button fx:id="cardButton" layoutX="194.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#firstCard" prefHeight="70.0" prefWidth="195.0" text="Card" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+      <Button fx:id="onsiteButton" layoutX="194.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#firstOnsite" prefHeight="70.0" prefWidth="195.0" text="Onsite" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
       </Button>
    </children>
-</Pane>
+</AnchorPane>

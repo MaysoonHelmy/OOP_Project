@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="image4" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vet_pet.Prescription">
+   <children>
+      <Pane layoutX="-7.0" layoutY="-7.0" prefHeight="807.0" prefWidth="1292.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="5.0" layoutY="8.0" prefHeight="602.0" prefWidth="1283.0">
+               <children>
+                  <Label fx:id="alert" textFill="#d80b0b" visible="true">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchField" alignment="CENTER" prefHeight="30.0" prefWidth="569.0" promptText="Enter ID ">
+                     <VBox.margin>
+                        <Insets left="300.0" right="300.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#searchAction" prefHeight="47.0" prefWidth="194.0" text="Search" textFill="#5559ce">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label text="PRESCRIPTION" textFill="#805722" underline="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <TextArea fx:id="prescription" disable="true" prefHeight="130.0" prefWidth="203.0" promptText="Enter Prescription">
+                     <VBox.margin>
+                        <Insets left="400.0" right="400.0" top="10.0" />
+                     </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="931.0" layoutY="136.0" text="SELECT STATUS" textFill="#805722" underline="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="selectStatus" disable="true" onMouseClicked="#choiceStatus" prefHeight="35.0" prefWidth="161.0" styleClass=".text1.label" stylesheets="@style.css">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <CheckBox fx:id="adoptCheck" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" text="READY FOR ADOPT" textFill="#5559ce" visible="false">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></CheckBox>
+                  <Button layoutX="890.0" layoutY="90.0" mnemonicParsing="false" onAction="#updateData" prefHeight="50.0" prefWidth="240.0" text="Update" textFill="#5559ce">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children></Pane>
+      <Button layoutX="1144.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="45.0" prefWidth="130.0" style="-fx-background-radius: 50;" text="back" textFill="#2e307c">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

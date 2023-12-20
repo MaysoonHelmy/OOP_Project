@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pet_shelter.SignUp">
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.SignUp">
    <children>
       <ImageView fitHeight="800.0" fitWidth="1550.0" layoutX="43.0" layoutY="46.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@WhatsApp%20Image%202023-12-15%20at%201.32.37%20PM.jpeg" />
+            <Image url="@WhatsApp%20Image%202023-12-13%20at%2012.11.55_1daa1465.jpg" />
          </image>
       </ImageView>
       <VBox layoutX="224.0" layoutY="143.0" prefHeight="506.0" prefWidth="1114.0" style="-fx-opacity: 1;">
@@ -35,7 +35,7 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="50.0" prefWidth="325.0" promptText="User_name">
+                  <TextField fx:id="username" prefHeight="50.0" prefWidth="325.0" promptText="User_name">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -55,7 +55,7 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="50.0" prefWidth="325.0" promptText="ID">
+                  <TextField fx:id="id" prefHeight="50.0" prefWidth="325.0" promptText="ID">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -75,7 +75,7 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Label>
-                  <PasswordField prefHeight="50.0" prefWidth="325.0" promptText="password">
+                  <PasswordField fx:id="passwoed" prefHeight="50.0" prefWidth="325.0" promptText="password">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -95,7 +95,7 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Label>
-                  <PasswordField prefHeight="50.0" prefWidth="325.0" promptText="confirm_password">
+                  <PasswordField fx:id="confirm" prefHeight="50.0" prefWidth="325.0" promptText="confirm_password">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -144,7 +144,7 @@
             </HBox>
          </children>
       </VBox>
-      <Button layoutX="705.0" layoutY="673.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="Sign_up">
+      <Button fx:id="sign" layoutX="705.0" layoutY="673.0" mnemonicParsing="false" onMouseClicked="#mainlist1" prefHeight="44.0" prefWidth="142.0" text="Sign_up">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>
@@ -154,7 +154,7 @@
             <Font name="Arial Rounded MT Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="918.0" layoutY="741.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" text="Log_in">
+      <Button fx:id="log_in" layoutX="918.0" layoutY="741.0" mnemonicParsing="false" onMouseClicked="#sign_in" prefHeight="35.0" prefWidth="134.0" text="Log_in">
          <font>
             <Font name="Candara" size="19.0" />
          </font>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMousePressed="#click" prefHeight="223.0" prefWidth="203.0" styleClass="cat-item" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.Item2">
+    <children>
+        <VBox alignment="CENTER" layoutX="63.0" layoutY="5.0" prefHeight="180.0" prefWidth="162.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="45.0" prefWidth="225.0">
+                    <children>
+                        <Label fx:id="nameLabel" prefHeight="27.0" prefWidth="89.0" text="Molly" textFill="#746969">
+                            <font>
+                                <Font name="SimHei" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="genderLabel" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="70.0" text="(Female)" textFill="#746969">
+                            <font>
+                                <Font name="SimHei" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+
+
+      <ImageView fx:id="img" fitHeight="157.0" fitWidth="183.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@Molly.png" />
+               </image></ImageView>
+            </children></VBox>
+    </children>
+</AnchorPane>

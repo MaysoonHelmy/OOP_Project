@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.Card">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1550.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@card.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="cardButton" layoutX="130.0" layoutY="347.0" mnemonicParsing="false" onMouseClicked="#firstCard" prefHeight="60.0" prefWidth="160.0" text="Card" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+      <Button fx:id="onsiteButton" layoutX="130.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#firstOnsite" prefHeight="60.0" prefWidth="160.0" text="Onsite" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+      <TextField fx:id="cardNumber" layoutX="884.0" layoutY="134.0" prefHeight="52.0" prefWidth="401.0">
+          <font>
+              <Font name="Arial" size="28.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="cardName" layoutX="884.0" layoutY="237.0" prefHeight="52.0" prefWidth="402.0">
+          <font>
+              <Font name="Arial" size="28.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="cardCvv" layoutX="884.0" layoutY="337.0" prefHeight="52.0" prefWidth="402.0">
+          <font>
+              <Font name="Arial" size="28.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="cardEXPT" layoutX="884.0" layoutY="442.0" prefHeight="52.0" prefWidth="402.0">
+          <font>
+              <Font name="Arial" size="28.0" />
+          </font>
+      </TextField>
+      <TextField fx:id="moneyAmount" layoutX="884.0" layoutY="554.0" prefHeight="52.0" prefWidth="402.0">
+          <font>
+              <Font name="Arial" size="28.0" />
+          </font>
+      </TextField>
+      <Button fx:id="Donate" layoutX="804.0" layoutY="687.0" mnemonicParsing="false" onMouseClicked="#Done" prefHeight="60.0" prefWidth="160.0" text="Donate">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+
+   </children>
+</AnchorPane>

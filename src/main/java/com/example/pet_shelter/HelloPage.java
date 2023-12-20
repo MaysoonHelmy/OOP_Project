@@ -70,7 +70,7 @@ public class HelloPage {
            Node node = (Node) event.getSource();
            Stage stage = (Stage) node.getScene().getWindow();
            stage.close();
-           Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+           Parent root = FXMLLoader.load(getClass().getResource("vetfinal.fxml"));
            Scene scene = new Scene(root);
            stage.setScene(scene);
            stage.show();

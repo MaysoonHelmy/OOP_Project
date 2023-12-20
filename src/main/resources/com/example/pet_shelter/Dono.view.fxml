@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="670.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.DonoView">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1550.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_1" layoutX="329.0" layoutY="149.0" prefHeight="116.0" prefWidth="960.0" text="What data do you need to Display">
+         <font>
+            <Font name="System Bold" size="58.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_1" layoutX="353.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#Adopt" prefHeight="86.0" prefWidth="298.0" text="Adopt" textAlignment="JUSTIFY" textFill="#0d0000" AnchorPane.rightAnchor="898.6">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.78" specularConstant="0.1" specularExponent="32.48" surfaceScale="1.04">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="button_2" cancelButton="true" layoutX="906.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#donate" prefHeight="86.0" prefWidth="298.0" text="Donate" textAlignment="JUSTIFY" textFill="#0d0000">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.78" specularConstant="0.1" specularExponent="32.48" surfaceScale="1.04">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="buttonback" layoutX="718.0" layoutY="572.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="Back">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.89" specularExponent="34.31" surfaceScale="2.97">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

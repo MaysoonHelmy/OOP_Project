@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.Cats">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1550.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Cats.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Back" alignment="CENTER" contentDisplay="CENTER" layoutX="781.0" layoutY="686.0" mnemonicParsing="false" onMouseClicked="#choose" prefHeight="32.0" prefWidth="227.0" text="Back" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+      <HBox layoutX="322.0" layoutY="140.0" prefHeight="223.0" prefWidth="520.0" />
+      <VBox fx:id="chosenCatCard" alignment="TOP_CENTER" layoutX="93.0" layoutY="222.0" prefHeight="398.0" prefWidth="276.0" styleClass="chosen-cat" stylesheets="@../../../style.css">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="90.0">
+               <children>
+                  <Label fx:id="catNameLabel" prefHeight="26.0" prefWidth="73.0" text="Grace" textFill="#5b5858">
+                     <font>
+                        <Font name="SimHei" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="catGenderLabel" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="80.0" text="(Female)" textFill="#5b5858">
+                     <font>
+                        <Font name="SimHei" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <ImageView fx:id="catImg" fitHeight="204.0" fitWidth="217.0" layoutX="210.0" layoutY="220.0" nodeOrientation="INHERIT" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@grace.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="TOP_CENTER" prefHeight="23.0" prefWidth="160.0">
+               <children>
+                  <Label fx:id="id" opacity="0.28" prefHeight="25.0" prefWidth="132.0" text="ID : 123789456" textAlignment="CENTER" textFill="#4e3f7e" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="SimHei" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="desc" alignment="TOP_CENTER" prefHeight="46.0" prefWidth="212.0" text="A cute calm cat (descripe)" textFill="#5b5858" />
+            <Button fx:id="Adopt" mnemonicParsing="false" onMouseClicked="#appointment" prefHeight="32.0" prefWidth="123.0" text="Adopt" textFill="#5b5858">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+            </Button>
+         </children></VBox>
+      <ScrollPane fx:id="scroll" layoutX="490.0" layoutY="172.0" prefHeight="494.0" prefWidth="924.0" styleClass="transparent" stylesheets="@../../../style.css">
+         <content>
+            <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

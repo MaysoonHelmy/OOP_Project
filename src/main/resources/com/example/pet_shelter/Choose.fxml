@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.donor333.Choose">
+   <children>
+      <FlowPane prefHeight="396.0" prefWidth="708.0" />
+      <ImageView fitHeight="800.0" fitWidth="1550.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Choose.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="catButton" layoutX="216.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#firstCat" prefHeight="62.0" prefWidth="150.0" text="Cats" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+      <Button fx:id="dogButton" layoutX="216.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#firstDog" prefHeight="62.0" prefWidth="150.0" text="Dogs" textFill="#5b5858">
+          <font>
+              <Font name="System Bold" size="27.0" />
+          </font>
+      </Button>
+
+   </children>
+</AnchorPane>
